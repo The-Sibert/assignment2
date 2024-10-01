@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<head>
+    <title>Target</title>
+    <style>
+        /* Basic body styles */
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+        /* Main container to center the target on the screen */
+        .target.container {
+            display: flex;
+            justify-content: center; /* Center horizontally */
+            align-items: center;     /* Center vertically */
+            height: 100vh;           /* Full viewport height */
+        }
+
+        /* Common styles for each circle */
+        .circle {
+            border-radius: 50%;       /* Make it circular */
+            position: absolute;       /* Position absolute to overlap each circle */
+            top: 50%;                 /* Center vertically */
+            left: 50%;                /* Center horizontally */
+            transform: translate(-50%, -50%); /* Move back by 50% of the size */
+        }
+
+        /* Outer black circle */
+        .circle.black {
+            width: 200px;
+            height: 200px;
+            background-color: black;
+        }
+
+        /* Blue circle */
+        .circle.blue {
+            width: 150px;
+            height: 150px;
+            background-color: blue;
+        }
+
+        /* Red circle */
+        .circle.red {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+
+        /* Inner yellow circle */
+        .circle.yellow {
+            width:      50px;
+            height: 50px;
+            background-color: yellow;
+        }
+
+        /* Target wrapper to stack circles on top of each other */
+        .target {
+            position: relative;
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="target container">
+        <div class="target">
+            <div class="circle black"></div>
+            <div class="circle blue"></div>
+            <div class="circle red"></div>
+            <div class="circle yellow"></div>
+        </div>
+    </div>
+</body>
+</html>
